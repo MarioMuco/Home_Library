@@ -36,6 +36,9 @@ public class Book {
     @Column(name = "Price")
     private int Price;
 
+    @Column(name = "Description")
+    private String Description;
+
     //Konstruktori
     public  Book(){
     }
@@ -97,6 +100,14 @@ public class Book {
         this.Price = price;
     }
 
+    public void setDesc(String Description){
+        this.Description = Description;
+    }
+
+    public String getDesc() {
+        return Description;
+    }
+
     @Override
     public String toString(){
         return "myBooks{" +
@@ -106,7 +117,8 @@ public class Book {
                 ", Category='" + Category + '\'' +
                 ", Publisher='" + Publisher + '\'' +
                 ", Language='" + Language + '\'' +
-                ", Price=" + Price +
+                ", Price=" + Price + '\'' +
+                ", Description=" + Description +
                 '}';
     }
 }
